@@ -12,11 +12,10 @@ public class Login_StepDefinitions {
     @When("user enters librarian password")
     public void user_enters_librarian_password() {
         System.out.println("user enters librarian password");
-
     }
-
     @Then("user should see the dashboard")
     public void user_should_see_the_dashboard() {
         System.out.println("user should see the dashboard");
+
     }
 }
