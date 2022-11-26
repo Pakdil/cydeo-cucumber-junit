@@ -11,9 +11,16 @@ public class GoogleStepDefinitions {
 
     GoogleSearchPage googleSearchPage = new GoogleSearchPage();
 
+    @When("user types {word} and clicks enter")
+    public void user_types_and_clicks_enter2 (String searchKeyword) {
+
+        googleSearchPage.searchBox.sendKeys(searchKeyword + Keys.ENTER);
+
+    }
     @When("user types {string} and clicks enter")
     public void user_types_and_clicks_enter(String searchKeyword) {
-googleSearchPage.searchBox.sendKeys(searchKeyword + Keys.ENTER);
+
+        googleSearchPage.searchBox.sendKeys(searchKeyword + Keys.ENTER);
 
     }
     @Then("user sees {string} in the google title")
@@ -26,10 +33,6 @@ googleSearchPage.searchBox.sendKeys(searchKeyword + Keys.ENTER);
 
     }
 
-    @When("user types apple and clicks enter")
-    public void userTypesAppleAndClicksEnter() {
-        googleSearchPage.searchBox.sendKeys("apple" + Keys.ENTER);
-    }
     @Then("user sees apple in the google title")
     public void userSeesAppleInTheGoogleTitle() {
 
