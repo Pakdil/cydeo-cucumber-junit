@@ -38,4 +38,8 @@ wikiSearchPage.searchButton.click();
 
     }
 
+    @Then("User sees Steve is in the main header")
+    public void userSeesSteveIsInTheMainHeader() {
+        Assert.assertTrue(wikiSearchPage.mainHeader.isDisplayed());
+    }
 }
