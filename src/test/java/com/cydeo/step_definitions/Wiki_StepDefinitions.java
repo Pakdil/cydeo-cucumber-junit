@@ -36,7 +36,6 @@ wikiSearchPage.searchButton.click();
         //verify actual title contains string (coming from feature file)
         Assert.assertTrue(Driver.getDriver().getTitle().contains(string));
 
-
     }
 
 }
