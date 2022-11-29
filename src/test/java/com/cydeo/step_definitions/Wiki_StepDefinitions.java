@@ -43,5 +43,7 @@ wikiSearchPage.searchButton.click();
     public void userSeesIsInTheMainHeader(String arg0) {
 
         Assert.assertTrue(wikiSearchPage.mainHeader.isDisplayed());
+
+        Assert.assertTrue(wikiSearchPage.mainHeader.getText().equals("Steve Jobs"));
     }
 }
