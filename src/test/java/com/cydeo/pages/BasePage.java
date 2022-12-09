@@ -26,5 +26,4 @@ public class BasePage {
     public WebElement logoutButton;
 
 
-
 }
