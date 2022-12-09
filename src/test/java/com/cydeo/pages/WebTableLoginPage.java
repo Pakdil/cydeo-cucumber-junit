@@ -7,7 +7,7 @@ import org.openqa.selenium.support.PageFactory;
 
 public class WebTableLoginPage {
 
-    public WebTableLoginPage() {
+    public WebTableLoginPage(){
         PageFactory.initElements(Driver.getDriver(), this);
     }
 
