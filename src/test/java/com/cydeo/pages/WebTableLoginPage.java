@@ -7,7 +7,7 @@ import org.openqa.selenium.support.PageFactory;
 
 public class WebTableLoginPage {
 
-    public WebTableLoginPage(){
+    public WebTableLoginPage() {
         PageFactory.initElements(Driver.getDriver(), this);
     }
 
@@ -22,7 +22,7 @@ public class WebTableLoginPage {
 
     /**
      * no parameters
-     *
+     * <p>
      * username: Test
      * password: Tester
      */
@@ -30,18 +30,30 @@ public class WebTableLoginPage {
     public void login() {
         this.inputUsername.sendKeys("Test");
         this.inputPassword.sendKeys("Tester");
-       this.loginButton.click();
+        this.loginButton.click();
     }
 
     /**
      * This method will accept two arguments and login
+     *
      * @param: username
      * @param: password
      */
     public void login(String username, String password) {
-        this.inputUsername.sendKeys(username);
-        this.inputPassword.sendKeys(password);
-        this.loginButton.click();
+        inputUsername.sendKeys(username);
+        inputPassword.sendKeys(password);
+        loginButton.click();
+    }
+
+    /**
+     * This method will login using credentials from
+     * configuration.properties
+     */
+
+    public void loginWithConfig() {
+        inputUsername.sendKeys("web.table.username");
+        inputPassword.sendKeys("web.table.pw");
+        loginButton.click();
     }
 
 }
